@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    tools:context=".Edit_Profile"
+    android:background="@drawable/gradient_background"
+    android:layout_width="match_parent">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_welcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sign"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tv_name"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="@string/name"
+                android:textSize="25sp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_welcome" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:hint="@string/enter_your_name"
+                android:inputType="text"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_name"
+                app:layout_constraintStart_toEndOf="@id/tv_name"
+                app:layout_constraintTop_toTopOf="@id/tv_name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/age"
+                android:textSize="25sp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toStartOf="@id/tv_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_your_age"
+                android:inputType="number"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_age"
+                app:layout_constraintStart_toStartOf="@id/et_name"
+                app:layout_constraintTop_toTopOf="@id/tv_age" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gender"
+                android:textSize="25sp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toStartOf="@id/tv_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_age" />
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toStartOf="@id/et_name"
+                app:layout_constraintTop_toTopOf="@id/tv_gender">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radio_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/male"
+                    android:checked="true"
+                    android:textSize="25sp" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radio_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/female"
+                    android:textSize="25sp" />
+            </RadioGroup>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phone"
+                android:textSize="25sp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toStartOf="@id/tv_name"
+                app:layout_constraintTop_toBottomOf="@id/radio_group" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_your_phone_number"
+                android:inputType="phone"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_phone"
+                app:layout_constraintStart_toStartOf="@id/et_name"
+                app:layout_constraintTop_toTopOf="@id/tv_phone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:textSize="25sp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toStartOf="@id/tv_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_phone" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_your_email"
+                android:inputType="textEmailAddress"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_email"
+                app:layout_constraintStart_toStartOf="@id/et_name"
+                app:layout_constraintTop_toTopOf="@id/tv_email" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/height"
+                android:layout_marginTop="30dp"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="@id/tv_name"
+                app:layout_constraintTop_toBottomOf="@id/et_mail" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_your_height"
+                android:inputType="numberDecimal"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_height"
+                app:layout_constraintStart_toStartOf="@id/et_name"
+                app:layout_constraintTop_toTopOf="@id/tv_height" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/weight"
+                android:layout_marginTop="30dp"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="@id/tv_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_height" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_your_weight"
+                android:inputType="numberDecimal"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_weight"
+                app:layout_constraintStart_toStartOf="@id/et_name"
+                app:layout_constraintTop_toTopOf="@id/tv_weight" />
+
+            <Button
+                android:id="@+id/btn_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_button"
+                android:text="@string/signup"
+                android:layout_marginTop="50dp"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_weight">
+
+            </Button>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

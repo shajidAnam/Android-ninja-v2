@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gradient_background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:context=".MainActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_30percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_35percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_image1"
+            android:layout_width="75dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ironman3"
+            app:layout_constraintBottom_toTopOf="@id/guideline_20percent"
+            app:layout_constraintDimensionRatio="3:5"
+            app:layout_constraintStart_toStartOf="@id/guideline_30percent"
+
+            >
+
+        </androidx.appcompat.widget.AppCompatImageView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_20percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_image2"
+            android:layout_width="75dp"
+            android:layout_height="0dp"
+            android:src="@drawable/ironman4"
+            app:layout_constraintBottom_toTopOf="@id/guideline_35percent"
+            app:layout_constraintDimensionRatio="3:5"
+            app:layout_constraintEnd_toStartOf="@id/iv_image3"
+            app:layout_constraintStart_toEndOf="@id/iv_image1"
+            app:layout_constraintTop_toBottomOf="@id/guideline_20percent">
+
+        </androidx.appcompat.widget.AppCompatImageView>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_image3"
+            android:layout_width="75dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ironman5"
+            app:layout_constraintDimensionRatio="3:5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_image2"
+            app:layout_constraintTop_toBottomOf="@id/iv_image2">
+
+        </androidx.appcompat.widget.AppCompatImageView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="Email: "
+            android:textSize="28dp"
+            app:layout_constraintEnd_toEndOf="@id/guideline_30percent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_image3">
+
+        </androidx.appcompat.widget.AppCompatTextView>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_your_email"
+            android:inputType="textEmailAddress"
+            android:textSize="28dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_email"
+            app:layout_constraintStart_toStartOf="@id/et_password"
+            app:layout_constraintTop_toTopOf="@id/tv_email" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="@string/password"
+            android:textSize="28dp"
+            app:layout_constraintStart_toStartOf="@id/tv_email"
+            app:layout_constraintTop_toBottomOf="@id/tv_email">
+
+        </androidx.appcompat.widget.AppCompatTextView>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_your_password"
+            android:inputType="textPassword"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_password"
+            app:layout_constraintStart_toEndOf="@id/tv_password"
+            app:layout_constraintTop_toTopOf="@id/tv_password"></androidx.appcompat.widget.AppCompatEditText>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="60dp"
+            android:background="@drawable/custom_button"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_password">
+
+        </Button>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
